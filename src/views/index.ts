@@ -1,1 +1,2 @@
-export { default as PlayerView } from "./PlayerView";
+export { default as IndexView } from "./IndexView";
+export { default as ChartView } from "./ChartView";
