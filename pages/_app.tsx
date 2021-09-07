@@ -2,6 +2,7 @@ import React from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
+import "assets/css/index.css";
 import "leaflet/dist/leaflet.css";
 import "swiper/swiper.min.css";
 

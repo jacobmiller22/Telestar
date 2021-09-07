@@ -9,7 +9,7 @@ const getTheme = (mode) =>
     createTheme({
       palette: (mode === EThemeMode.LIGHT ? light : dark) as PaletteOptions,
       layout: {
-        contentWidth: 1236,
+        contentWidth: 1250,
       },
       typography: {
         fontFamily: "Lato",
