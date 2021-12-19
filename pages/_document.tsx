@@ -5,7 +5,7 @@
  */
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheets } from "@material-ui/core/styles";
+import ServerStyleSheets from "@mui/styles/ServerStyleSheets";
 
 export default class MyDocument extends Document {
   render() {
@@ -14,10 +14,10 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/assets/favicon.ico" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#3f51b5" />
           <meta
             name="description"
-            content="A modern design system for your new landing and web pages."
+            content="A learning management system for shorter courses."
           />
           <meta
             name="robots"
@@ -25,22 +25,16 @@ export default class MyDocument extends Document {
           />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
-          <meta
+          {/* <meta
             property="og:image"
             content="https://thefront.maccarianagency.com/assets/social.png"
-          />
-          <meta
-            property="og:title"
-            content="theFront | UI Kit by Maccarian Agency."
-          />
+          /> */}
+          <meta property="og:title" content="LMS | VT Sanghani Center" />
           <meta
             property="og:description"
-            content="A modern design system for your new landing and web pages."
+            content="A learning management system for shorter courses."
           />
-          <meta
-            property="og:url"
-            content="https://thefront.maccarianagency.com/"
-          />
+          <meta property="og:url" content="https://lms-chi.vercel.app" />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap"
             rel="stylesheet"

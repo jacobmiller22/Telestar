@@ -1,10 +1,16 @@
-import { Main } from "layouts";
-import React from "react";
-import { IndexView } from "views";
-import WithLayout from "WithLayout";
+import type { NextPage } from "next";
+import { Split } from "layouts";
+import { Dashboard } from "views";
 
-const dashboard = () => {
-  return <WithLayout component={IndexView} layout={Main} />;
-};
+/** Components */
+import TopbarGroup from "components/Atomics/TopbarGroup";
+import { DEFAULT_TOPBAR_ITEMS } from "consts";
 
-export default dashboard;
+const IndexPage: NextPage = () => (
+  //@ts-ignore
+  <Split topbarItems={TopbarGroup({ items: DEFAULT_TOPBAR_ITEMS })}>
+    <Dashboard />
+  </Split>
+);
+
+export default IndexPage;

@@ -1,15 +1,16 @@
-import { createTheme, responsiveFontSizes } from "@material-ui/core";
-import { PaletteOptions } from "@material-ui/core/styles/createPalette";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { PaletteOptions } from "@mui/material/styles/createPalette";
 import { light, dark } from "./palette";
 import { EThemeMode } from "interfaces/Theme";
 // import MUIRichTextEditor from "mui-rte";
 
-const getTheme = (mode) =>
+const getTheme = (mode: any) =>
   responsiveFontSizes(
     createTheme({
       palette: (mode === EThemeMode.LIGHT ? light : dark) as PaletteOptions,
+      //@ts-ignore
       layout: {
-        contentWidth: 1250,
+        contentWidth: 1236,
       },
       typography: {
         fontFamily: "Lato",
@@ -18,19 +19,7 @@ const getTheme = (mode) =>
         appBar: 1200,
         drawer: 1100,
       },
-      overrides: {
-        //@ts-expect-error
-        MUIRichTextEditor: {
-          root: {
-            marginTop: 20,
-            width: "80%",
-          },
-          editor: {
-            borderBottom: "1px solid gray",
-            minHeight: "50vh",
-          },
-        },
-      },
+      overrides: {},
     })
   );
 
